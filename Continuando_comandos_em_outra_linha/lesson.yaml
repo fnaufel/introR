@@ -1,0 +1,67 @@
+- Class: meta
+  Course: Introdução a R
+  Lesson: Continuando comandos em outra linha
+  Author: fnaufel
+  Type: Standard
+  Organization: fnaufel
+  Version: 2.4.5
+
+
+- Class: script
+  Output: |
+    Quando um comando continua na próxima linha?
+    
+    Execute os trechos de código do script e descubra as regras.
+    
+    Digite skip() no console quando acabar.
+  AnswerTests: TRUE
+  Hint: 
+  Script: continua.R
+
+- Class: mult_question
+  Output: Quais são os trechos que executam sem erro?
+  AnswerChoices: 1 e 3;1, 3 e 4;1, 3 e 5;2 e 4; 2, 4 e 5
+  CorrectAnswer: 1, 3 e 5
+  AnswerTests: omnitest(correctVal='1, 3 e 5')
+  Hint: |
+    Preste atenção nos resultados no console. 
+    
+    Pode haver mensagens de erro junto de resultados parciais.
+
+- Class: mult_question
+  Output: |
+    O comando abaixo executa com sucesso?
+    
+    x <- 2 + 
+    
+         2
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Sim
+  AnswerTests: omnitest(correctVal='Sim')
+  Hint: 
+
+- Class: mult_question
+  Output: |
+    O comando abaixo executa com sucesso?
+    
+    x <- 2 
+    
+         + 2
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Não
+  AnswerTests: omnitest(correctVal='Não')
+  Hint: 
+
+- Class: mult_question
+  Output: |
+    O comando abaixo executa com sucesso?
+    
+    x <- (2
+    
+          +
+    
+         2)
+  AnswerChoices: Sim;Não
+  CorrectAnswer: Sim
+  AnswerTests: omnitest(correctVal='Sim')
+  Hint: 

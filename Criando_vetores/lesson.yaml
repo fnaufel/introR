@@ -1,0 +1,16 @@
+- Class: meta
+  Course: Introdução a R
+  Lesson: Criando vetores
+  Author: fnaufel
+  Type: Standard
+  Organization: fnaufel
+  Version: 2.4.5
+
+- Class: script
+  Output: |
+    No script aberto, crie o vetor 0, 2, 4, 6, ..., 20 de duas maneiras diferentes.
+    
+    Atribua os dois vetores às variáveis x e y.
+  AnswerTests: test_vetores_20()
+  Hint: "Use a função seq(). Use o operador : e multiplicação."
+  Script: vetores_20.R

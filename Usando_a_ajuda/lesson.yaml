@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Introdução a R
+  Lesson: Usando a ajuda
+  Author: fnaufel
+  Type: Standard
+  Organization: fnaufel
+  Version: 2.4.5
+
+- Class: cmd_question
+  Output: |
+    Use ? seguido do nome de uma função para ver a página de ajuda sobre a função.
+    
+    Digite ?getwd e descubra para que serve esta função.
+  CorrectAnswer: ?getwd
+  AnswerTests: omnitest(correctExpr='?getwd')
+  Hint: 
+
+- Class: cmd_question
+  Output: |
+    Use example('...') para rodar, no console, os exemplos que estão na página de ajuda da função.
+    
+    Digite example('getwd')
+  CorrectAnswer: example('getwd')
+  AnswerTests: omnitest(correctExpr='example(\'getwd\')')
+  Hint: 
