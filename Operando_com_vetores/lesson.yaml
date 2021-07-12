@@ -1,0 +1,274 @@
+- Class: meta
+  Course: introR
+  Lesson: Operando com vetores
+  Author: fnaufel
+  Type: Standard
+  Organization: fnaufel
+  Version: 2.4.5
+
+
+- Class: text
+  Output: |
+  
+    EXERCÍCIOS DE INTRODUÇÃO A R
+    
+    OPERANDO COM VETORES
+    
+    Tecle ENTER para continuar
+
+- Class: text
+  Output: |
+    
+    
+    Quando você estiver no prompt do R (>), digite
+    
+    .   skip() para pular a questão atual.
+   
+    .   play() para experimentar com o R por conta própria.
+   
+    .   nxt() para ganhar a atenção do swirl novamente.
+   
+    .   main() para voltar ao menu principal do swirl.
+   
+    .   info() para ver esta lista de comandos.
+   
+    .   bye() para sair.
+    
+    Tecle ENTER para continuar
+    
+
+# 3
+- Class: cmd_question
+  Output: |
+    
+    
+    Em uma única linha, crie o vetor 
+    
+    `1, 4, 9, 16, 25, 36, 49, 64, 81, 100`
+    
+    a partir do vetor `seq(0, 20, 2)`.
+    
+    Não digite os elementos do vetor.
+  CorrectAnswer: (seq(0, 20, 2) / 2)^2
+  AnswerTests: 
+    omnitest(
+      correctExpr='(seq(0, 20, 2) / 2)^2', 
+      correctVal=(seq(0, 20, 2) / 2)^2
+    )
+  Hint: |
+  
+  
+    Use o operador de exponenciação `^`.
+
+
+- Class: text
+  Output: |
+    
+    
+    Tecle Enter.
+
+
+# 5
+- Class: figure
+  Output: |
+    
+    
+    Observe que belo somatório de potências de 2 e tecle Enter.
+  Figure: potencias-de-2.R
+  FigureType: new
+
+
+# 6
+- Class: cmd_question
+  Output: |
+    
+    
+    Use o vetor `0:10` e a função `sum` para calcular 
+    o valor deste belo somatório.
+    
+    Não digite os elementos do vetor.
+  CorrectAnswer: sum(2^(0:10))
+  AnswerTests: omnitest(correctExpr='sum(2^(0:10))')
+  Hint: |
+    
+    
+    O valor certo é 2047.
+    
+    Dica: o operador `^` tem precedência maior que o operador `:`.
+    Use parênteses.
+
+
+- Class: text
+  Output: |
+    
+    
+    Tecle Enter.
+
+
+# 8
+- Class: figure
+  Output: |
+    
+    
+    Observe que belo somatório de quadrados e tecle Enter.
+  Figure: quadrados.R
+  FigureType: new
+
+
+# 9
+- Class: cmd_question
+  Output: |
+    
+    
+    Use o vetor `0:10` e a função `sum` para calcular 
+    o valor deste belo somatório.
+    
+    Não digite os elementos do vetor.
+  CorrectAnswer: sum((0:10)^2)
+  AnswerTests: omnitest(correctExpr='sum((0:10)^2)')
+  Hint: |
+    
+    
+    O valor certo é 385.
+    
+    Dica: o operador `^` tem precedência maior que o operador `:`.
+    Use parênteses.
+
+
+- Class: text
+  Output: |
+    
+    
+    Tecle Enter.
+
+
+# 10
+- Class: figure
+  Output: |
+    
+    
+    Observe este belo somatório de produtos de números consecutivos 
+    e tecle Enter.
+  Figure: lead.R
+  FigureType: new
+
+
+# 11
+- Class: cmd_question
+  Output: |
+    
+    
+    Use o vetor `0:10` e a função `sum` para calcular 
+    o valor deste belo somatório.
+    
+    Não digite os elementos do vetor.
+    
+    Dica: veja a função `dplyr::lead` e seu argumento `default`.
+  CorrectAnswer: sum((0:10) * dplyr::lead(0:10, default = 11))
+  AnswerTests: 
+    omnitest(
+      correctExpr='sum((0:10) * dplyr::lead(0:10, default = 11))'
+    )
+  Hint: |
+    
+    
+    O valor certo é 440.
+    
+    A função `lead` coloca `NA` no último elemento do vetor. 
+    
+    Você precisa mudar isso com o argumento `default`.
+
+
+- Class: text
+  Output: |
+    
+    
+    Tecle Enter.
+
+
+# 12
+- Class: figure
+  Output: |
+    
+    
+    Observe este belo somatório de produtos de números consecutivos ---
+    diferente do anterior, por sinal ---  e tecle Enter.
+  Figure: lag.R
+  FigureType: new
+
+
+# 13
+- Class: cmd_question
+  Output: |
+    
+    
+    Use o vetor `0:10` e a função `sum` para calcular 
+    o valor deste belo somatório.
+    
+    Não digite os elementos do vetor.
+    
+    Dica: veja a função `dplyr::lag` e seu argumento `default`.
+  CorrectAnswer: sum((0:10) * dplyr::lag(0:10, default = -1))
+  AnswerTests: 
+    omnitest(
+      correctExpr='sum((0:10) * dplyr::lag(0:10, default = -1))'
+    )
+  Hint: |
+    
+    
+    O valor certo é 330.
+    
+    A função `lag` coloca `NA` no primeiro elemento do vetor. 
+    
+    Você precisa mudar isso com o argumento `default`.
+
+
+- Class: text
+  Output: |
+    
+    
+    Tecle Enter.
+
+
+# 15
+- Class: figure
+  Output: |
+    
+    
+    Observe que belo somatório duplo.
+    
+    Sugiro que você escreva este somatório por extenso em algum lugar.
+    
+    Olhe para ele até entender o que ele significa.
+    
+    Escrever a soma em várias linhas (uma para cada valor de k) 
+    pode ajudar.
+    
+    Tecle Enter.
+  Figure: duplo.R
+  FigureType: new
+
+
+# 16
+- Class: cmd_question
+  Output: |
+    
+    
+    Use o vetor `0:10` e a função `sum` para calcular 
+    o valor deste belo somatório.
+    
+    Não digite os elementos do vetor.
+    
+    Dica: veja a função `cumsum`.
+  CorrectAnswer: sum(cumsum(0:10))
+  AnswerTests: 
+    omnitest(
+      correctExpr='sum(cumsum(0:10))'
+    )
+  Hint: |
+    
+    
+    O valor certo é 220.
+    
+    Para cada valor de k, o somatório interno vale `cumsum(0:10)[k]`.
+

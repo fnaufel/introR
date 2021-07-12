@@ -1,9 +1,9 @@
 - Class: text
   Output: |
   
-    EXERCÍCIOS DE INTRODUÇÃO A R
+    ***CURSO***
     
-    CRIANDO VETORES
+    ***LIÇÃO***
     
     Tecle ENTER para continuar
 
