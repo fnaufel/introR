@@ -13,9 +13,18 @@
 
 test_vetores_20 <- function() {
   
-  xok <- exists('x') && identical(x, seq(0, 20, 2)) 
-  yok <- exists('y') && identical(y, seq(0, 20, 2)) 
+  xok <- exists('x') && identical(x, seq(0, 20, 2))
+  yok <- exists('y') && identical(y, seq(0, 20, 2))
   
   xok && yok
+
+}
+
+test_vetores_10 <- function() {
   
+  xok <- exists('x') && identical(x, seq(1, 0, -.01))
+  yok <- exists('y') && identical(y, seq(1, 0, -.01))
+  
+  xok && yok
+
 }

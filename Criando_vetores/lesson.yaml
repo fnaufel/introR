@@ -39,14 +39,195 @@
   Output: |
     
     
-    No script aberto, crie o vetor 0, 2, 4, 6, ..., 20 de duas maneiras diferentes.
+    No script aberto, crie o vetor `0, 2, 4, 6, ..., 20` de duas maneiras diferentes.
     
-    Atribua os dois vetores às variáveis x e y.
+    Atribua os dois vetores às variáveis `x` e `y`.
   AnswerTests: test_vetores_20()
   Hint: | 
     
     
-    Examine suas variáveis x e y no console para ver o que está errado.
+    Examine suas variáveis `x` e `y` no console para ver o que está errado.
     
-    (1) Use a função seq(). (2) Use o operador : e multiplicação.
+    (1) Use a função `seq()`. (2) Use o operador `:` e multiplicação.
   Script: vetores_20.R
+
+
+- Class: script
+  Output: "
+    
+
+    No script aberto, crie o vetor `1, .99, .98, .97, ..., 0` de duas maneiras diferentes.
+
+    
+    Atribua os dois vetores às variáveis `x` e `y`.
+    "
+  AnswerTests: test_vetores_10()
+  Hint: "
+  
+  
+    Examine suas variáveis `x` e `y` no console para ver o que está errado.
+    
+    
+    (1) Use a função `seq()`. (2) Use o operador `:`,  multiplicação e subtração.
+    "
+  Script: vetores_10.R
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Examine o conteúdo do vetor `LETTERS` (em maiúsculas mesmo).
+  CorrectAnswer: LETTERS
+  AnswerTests: omnitest(correctExpr='LETTERS')
+  Hint: Digite `LETTERS`
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Examine o conteúdo do vetor `letters` (agora em minúsculas).
+  CorrectAnswer: LETTERS
+  AnswerTests: omnitest(correctExpr='letters')
+  Hint: Digite `letters`
+
+
+- Class: cmd_question
+  Output: |
+  
+  
+    Crie um vetor com as 5 primeiras letras maiúsculas e 
+    as 5 últimas letras minúsculas do alfabeto.
+  CorrectAnswer: c(LETTERS[1:5], letters[(length(letters) - 4):length(letters)])
+  AnswerTests: 
+    omnitest(
+      correctExpr='c(LETTERS[1:5], letters[(length(letters) - 4):length(letters)])', 
+      correctVal=c(LETTERS[1:5], letters[(length(letters) - 4):length(letters)])
+    )
+  Hint: |
+  
+  
+    Use `[...]` para selecionar elementos de um vetor.
+    
+    Use a função `c` para juntar dois vetores.
+    
+    Use a função `length` para obter o comprimento de um vetor.
+
+# 8
+- Class: cmd_question
+  Output: |
+  
+  
+    Com um comando só, crie um único vetor com os números de 1 a 50, 
+    as letras de `J` a `P`, e os números de 100 a 51, nesta ordem.
+    
+    Observe o tipo dos elementos do vetor criado.
+  CorrectAnswer: c(1:50, LETTERS[10:16], 100:51)
+  AnswerTests: 
+    omnitest(
+      correctExpr='c(1:50, LETTERS[10:16], 100:51)', 
+      correctVal=c(1:50, LETTERS[10:16], 100:51)
+    )
+  Hint: |
+  
+  
+    Indexe o vetor `LETTERS` com uma sequência construída com `:`.
+    
+    O operador `:` pode construir sequências decrescentes também.
+
+
+# 9
+- Class: cmd_question
+  Output: |
+    
+    
+    Os elementos de um vetor podem ter nomes.
+    
+    Crie o vetor `v` com 3 elementos: 5, 6, e 4.
+    
+    Os nomes dos elementos serão 'p1', 'p2', e 'vs'.
+  CorrectAnswer: v <- c('p1' = 5, 'p2' = 6, 'vs' = 4)
+  AnswerTests: 
+    omnitest(
+      correctExpr='v <- c(\'p1\' = 5, \'p2\' = 6, \'vs\' = 4)'
+    )
+  Hint: |
+  
+  
+    Digite algo da forma
+    
+    v <- c('nome1' = valor, 'nome2' = valor, ...)
+
+
+# 10
+- Class: cmd_question
+  Output: |
+    
+    
+    Se os nomes dos elementos forem nomes válidos de variáveis,
+    você nem precisa pôr os nomes entre aspas.
+    
+    Crie o mesmo vetor, desta vez sem usar aspas.
+  CorrectAnswer: v <- c(p1 = 5, p2 = 6, vs = 4)
+  AnswerTests: 
+    omnitest(
+      correctExpr='v <- c(p1 = 5, p2 = 6, vs = 4)'
+    )
+  Hint: |
+  
+  
+    Digite algo da forma
+    
+    v <- c(nome1 = valor, nome2 = valor, ...)
+
+
+# 11
+- Class: cmd_question
+  Output: |
+  
+  
+    Os nomes dos elementos podem ser usados como índices.
+    
+    Acesse a nota da vs no vetor `v`.
+    
+    Será que você precisa usar aspas?
+  CorrectAnswer: v['vs']
+  AnswerTests: omnitest(correctExpr='v[\'vs\']')
+  Hint: |
+  
+  
+    Sim, para indexar o vetor, você precisa usar aspas.
+    
+    A idéia é evitar confusão entre nomes e variáveis.
+    
+    Se existir uma variável `vs` com o valor 1, e as aspas não fossem
+    obrigatórias, qual seria o valor de `v[vs]`???
+    
+
+# 12
+- Class: cmd_question
+  Output: |
+    
+    
+    Veja a documentação da função `names`, inclusive os exemplos.
+  CorrectAnswer: ?names
+  AnswerTests: omnitest(correctExpr='?names')
+  Hint: |
+  
+  
+    Digite ?names
+
+
+# 13
+- Class: cmd_question
+  Output: |
+    
+    
+    Mude o nome do último elemento de `v` de 'vs' para 'vr'.
+  CorrectAnswer: names(v)[3] = 'vr'
+  AnswerTests: omnitest(correctExpr='names(v)[3] = \'vr\'')
+  Hint: |
+  
+  
+    Preste atenção nos últimos dois exemplos da ajuda de `names`.

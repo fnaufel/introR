@@ -8,10 +8,10 @@
 # (Mas vc não vai desistir, vai?)
 
 
-# Atribua a x o vetor 0, 2, 4, 6, ..., 20
+# Atribua a x o vetor `1, .99, .98, .97, ..., 0`.
 x <- ...
 
-# Atribua a y o vetor 0, 2, 4, 6, ..., 20 de outra maneira
+# Atribua a y o vetor `1, .99, .98, .97, ..., 0`. de outra maneira
 y <- ...
 
 

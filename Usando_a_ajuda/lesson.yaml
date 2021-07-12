@@ -40,47 +40,47 @@
   Output: |
     
     
-    Use ? seguido do nome de uma função para ver a página de ajuda sobre a função.
+    Use `?` seguido do nome de uma função para ver a página de ajuda sobre a função.
     
-    Digite ?mean e descubra para que serve esta função.
+    Digite `?mean` e descubra para que serve esta função.
   CorrectAnswer: ?mean
   AnswerTests: omnitest(correctExpr='?mean')
-  Hint: Digite ?mean
+  Hint: Digite `?mean`
 
 - Class: text_question
   Output: | 
     
     
-    O que a função mean calcula?
+    O que a função `mean` calcula?
   CorrectAnswer: A média de um vetor.
-  AnswerTests: val_matches('[Mm]édia')
+  AnswerTests: val_matches('[Mm][eé]dia')
   Hint: Leia a página de ajuda que você abriu!
 
 - Class: cmd_question
   Output: |
     
     
-    Use example('...') para rodar, no console, os exemplos que estão na página de ajuda da função.
+    Use `example('...')` para rodar, no console, os exemplos que estão na página de ajuda da função.
     
-    Digite example('mean')
+    Digite `example('mean')`
   CorrectAnswer: example('mean')
   AnswerTests: expr_identical_to('example(\'mean\')') || expr_identical_to('example(mean)') 
-  Hint: Digite example('mean')
+  Hint: Digite `example('mean')`
 
 - Class: cmd_question
   Output: |
     
     
-    Examine o valor da variável x criada pelos exemplos acima.
+    Examine o valor da variável `x` criada pelos exemplos acima.
   CorrectAnswer: x
   AnswerTests: expr_identical_to('x') || expr_identical_to(print(x))
-  Hint: "Basta digitar o nome da variável: x"
+  Hint: "Basta digitar o nome da variável: `x`"
 
 - Class: cmd_question
   Output: |
     
     
-    Examine o valor da variável xm criada pelos exemplos acima.
+    Examine o valor da variável `xm` criada pelos exemplos acima.
   CorrectAnswer: xm
   AnswerTests: expr_identical_to('xm') || expr_identical_to(print(xm))
-  Hint: "Basta digitar o nome da variável: xm"
+  Hint: "Basta digitar o nome da variável: `xm`"

@@ -1,0 +1,29 @@
+- Class: text
+  Output: |
+  
+    EXERCÍCIOS DE INTRODUÇÃO A R
+    
+    CRIANDO VETORES
+    
+    Tecle ENTER para continuar
+
+- Class: text
+  Output: |
+    
+    
+    Quando você estiver no prompt do R (>), digite
+    
+    .   skip() para pular a questão atual.
+   
+    .   play() para experimentar com o R por conta própria.
+   
+    .   nxt() para ganhar a atenção do swirl novamente.
+   
+    .   main() para voltar ao menu principal do swirl.
+   
+    .   info() para ver esta lista de comandos.
+   
+    .   bye() para sair.
+    
+    Tecle ENTER para continuar
+    
