@@ -22,15 +22,17 @@ test_bhaskara <- function() {
     testes <- vector(length = 3)
     
     try(
-      {
-        testes[1] <- 
-          identical(raizes(1, -5, 6), c(2, 3)) || 
-          identical(raizes(1, -5, 6), c(3, 2))
-        testes[2] <- 
-          identical(raizes(1, -6, 9), c(3, 3))
-        testes[3] <- 
-          identical(raizes(1, 1, 1), 'Sem raízes reais.')
-      },
+      suppressWarnings(
+        {
+          testes[1] <- 
+            identical(raizes(1, -5, 6), c(2, 3)) || 
+            identical(raizes(1, -5, 6), c(3, 2))
+          testes[2] <- 
+            identical(raizes(1, -6, 9), c(3, 3))
+          testes[3] <- 
+            identical(raizes(1, 1, 1), c(NaN, NaN))
+        }
+      ),
       silent = TRUE
     )
     

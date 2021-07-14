@@ -12,12 +12,6 @@ raizes <- function(a, b, c) {
   
   delta <- discriminante(a, b, c)
   
-  if (delta >= 0) {
+  (-b + c(1, -1) * sqrt(delta)) / (2 * a)
     
-    (-b + c(1, -1) * sqrt(delta)) / (2 * a)
-    
-  } else {
-    'Sem raízes reais.'
-  }
-  
 }

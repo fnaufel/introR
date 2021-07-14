@@ -1,8 +1,21 @@
 
-# Substitua `...` pelos seus comandos.
+# A idéia é substituir `...` pelos seus comandos.
 # 
+# Seja curioso. Digite `play()` no console e 
+# faça experiências no prompt do R.
 # 
-# Depois, salve este arquivo e digite `submit()` no console.
+# Você pode pôr o cursor em qualquer comando neste script 
+# e teclar CTRL-Enter para executar o comando no console.
+# 
+# Ou você pode selecionar o trecho que você quiser 
+# e teclar CTRL-Enter para executar só esse trecho no console.
+# 
+# Use estes recursos para testar sua solução.
+# 
+# Salve este arquivo quantas vezes você quiser.
+# 
+# Quando quiser verificar sua solução, salve este arquivo
+# e digite `submit()` no console.
 # 
 # Para desistir, digite `skip()` no console.
 # (Mas vc não vai desistir, vai?)
@@ -21,12 +34,6 @@ raizes <- function(a, b, c) {
   
   delta <- discriminante(a, b, c)
   
-  if (delta >= 0) {
+  (-b + ... * sqrt(delta)) / (2 * a)
     
-    (-b + ... * sqrt(delta)) / (2 * a)
-    
-  } else {
-    'Sem raízes reais.'
-  }
-  
 }

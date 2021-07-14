@@ -142,7 +142,7 @@
     Tecle Enter.
 
 
-# 10
+# 11
 - Class: figure
   Output: |
     
@@ -153,7 +153,7 @@
   FigureType: new
 
 
-# 11
+# 12
 - Class: cmd_question
   Output: |
     
@@ -186,7 +186,7 @@
     Tecle Enter.
 
 
-# 12
+# 14
 - Class: figure
   Output: |
     
@@ -197,7 +197,7 @@
   FigureType: new
 
 
-# 13
+# 15
 - Class: cmd_question
   Output: |
     
@@ -230,7 +230,7 @@
     Tecle Enter.
 
 
-# 15
+# 17
 - Class: figure
   Output: |
     
@@ -249,7 +249,7 @@
   FigureType: new
 
 
-# 16
+# 18
 - Class: cmd_question
   Output: |
     
@@ -273,7 +273,7 @@
     Para cada valor de k, o somatório interno vale `cumsum(0:10)[k]`.
 
 
-#17
+#19
 - Class: script
   Output: |
     
@@ -281,7 +281,7 @@
     Complete esta implementação de Bhaskara.
     
     Só falta uma expressão na função `raizes` para que ela retorne,
-    DE UMA SÓ VEZ, um vetor com as duas raízes reais.
+    DE UMA SÓ VEZ, um vetor com as duas raízes.
   AnswerTests: test_bhaskara()
   Hint: |
     

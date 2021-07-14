@@ -1,3 +1,11 @@
+- Class: meta
+  Course: introR
+  Lesson: ...ndo ...
+  Author: fnaufel
+  Type: Standard
+  Organization: fnaufel
+  Version: 2.4.5
+
 - Class: text
   Output: |
   
