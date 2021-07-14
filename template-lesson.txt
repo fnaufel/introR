@@ -1,9 +1,9 @@
 - Class: text
   Output: |
   
-    ***CURSO***
+    EXERCÍCIOS DE INTRODUÇÃO A R
     
-    ***LIÇÃO***
+    ...NDO ...
     
     Tecle ENTER para continuar
 
