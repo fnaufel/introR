@@ -1,9 +1,9 @@
 - Class: meta
   Course: introR
   Lesson: Selecionando elementos
-  Author: your name goes here
+  Author: fnaufel
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: fnaufel
   Version: 2.4.5
 
 
@@ -36,3 +36,290 @@
     
     Tecle ENTER para continuar
     
+
+# 3
+- Class: figure
+  Output: |
+    
+    
+    Observe os seguintes vetores. Imagine que `notas[i]` é 
+    o valor da nota do aluno de nome `nomes[i]`. 
+    Tecle Enter quando estiver pronto para continuar.
+  Figure: notas-e-nomes.R
+  FigureType: new
+
+
+# 4
+- Class: cmd_question
+  Output: |
+    
+    
+    Use a função `paste` para criar um vetor onde cada elemento
+    é um string contendo cada nome e a nota correspondente.
+  CorrectAnswer: paste(nomes, notas)
+  AnswerTests: omnitest(correctExpr='paste(nomes, notas)')
+  Hint: |
+    
+    
+    Digite `paste(nomes, notas)`.
+    
+
+# 5 
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para ver o comprimento do vetor `notas`.
+  CorrectAnswer: length(notas)
+  AnswerTests: omnitest(correctExpr='length(notas)')
+  Hint: |
+    
+    
+    Use a função `length()`.
+
+
+# 6
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar o VALOR da maior nota.
+  CorrectAnswer: max(notas)
+  AnswerTests: omnitest(correctExpr='max(notas)')
+  Hint: |
+    
+    
+    Use a função `max()`.
+
+
+# 7
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar os nomes que correspondem à maior nota.
+  CorrectAnswer: nomes[notas == max(notas)]
+  AnswerTests: omnitest(correctExpr='nomes[notas == max(notas)]')
+  Hint: |
+    
+    
+    Indexe o vetor `nomes` com a condição `notas == max(notas)`.
+
+
+# 8
+- Class: cmd_question
+  Output: |
+    
+    
+    Para ter certeza de que entendeu o que significa um teste sobre
+    um vetor, mostre o valor de `notas == max(notas)`.
+  CorrectAnswer: notas == max(notas)
+  AnswerTests: omnitest(correctExpr='notas == max(notas)')
+  Hint: |
+    
+    
+    Digite `notas == max(notas)`.
+
+
+# 9
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar o ÍNDICE da PRIMEIRA ocorrẽncia 
+    da maior nota.
+  CorrectAnswer: which.max(notas)
+  AnswerTests: omnitest(correctExpr='which.max(notas)')
+  Hint: |
+    
+    
+    Use a função `which.max()`.
+
+
+# 10
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar os ÍNDICES de TODAS as ocorrẽncias 
+    da maior nota.
+  CorrectAnswer: which(notas == max(notas))
+  AnswerTests: omnitest(correctExpr='which(notas == max(notas))')
+  Hint: |
+    
+    
+    Use a função `which()` com a condição `notas == max(notas)`.
+
+
+# 11
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar a nota MÉDIA.
+  CorrectAnswer: mean(notas)
+  AnswerTests: omnitest(correctExpr='mean(notas)')
+  Hint: |
+    
+    
+    Use a função `mean()`.
+
+
+# 12
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar o vetor de notas ABAIXO da média.
+  CorrectAnswer: notas[notas < mean(notas)]
+  AnswerTests: omnitest(correctExpr='notas[notas < mean(notas)]')
+  Hint: |
+    
+    
+    Indexe o vetor `notas` com uma condição envolvendo `mean(notas)`.
+
+
+# 13
+- Class: cmd_question
+  Output: |
+    
+    
+    Entre o comando para retornar os NOMES que correspondem a notas 
+    ABAIXO da média.
+  CorrectAnswer: nomes[notas < mean(notas)]
+  AnswerTests: omnitest(correctExpr='nomes[notas < mean(notas)]')
+  Hint: |
+    
+    
+    Indexe o vetor `nomes` com a mesma condição da questão anterior.
+
+
+# 14
+- Class: cmd_question
+  Output: |
+    
+    
+    Use a função `sort` para retornar as notas em ordem CRESCENTE.
+  CorrectAnswer: sort(notas)
+  AnswerTests: omnitest(correctExpr='sort(notas)')
+  Hint: |
+    
+    
+    Digite `sort(notas)`.
+    
+
+# 15
+- Class: cmd_question
+  Output: |
+    
+    
+    Use a função `sort` para retornar as notas em ordem DECRESCENTE.
+    
+    Se precisar, veja a ajuda da função `sort`.
+  CorrectAnswer: sort(notas, decreasing = TRUE)
+  AnswerTests: omnitest(correctExpr='sort(notas, decreasing = TRUE)')
+  Hint: |
+    
+    
+    Digite `?sort` e veja a ajuda.
+    
+
+# 16
+- Class: figure
+  Output: |
+    
+    
+    A função `order()` retorna um vetor de ÍNDICES que, se usado
+    para indexar o vetor original, produz o vetor original ordenado.
+    
+    Ou seja, em `order(v)`, o número 2 na posição 1 significa que o
+    elemento 2 do vetor original fica na posição 1 do vetor ordenado.
+    
+    Por exemplo, considere o vetor `v` abaixo e o resultado de 
+    `order(v)`. 
+    
+    Tecle Enter para continuar.
+  Figure: vetor-order.R
+  FigureType: new
+
+
+# 17
+- Class: cmd_question
+  Output: |
+    
+    
+    Confirme que `v[order(v)]` retorna o vetor `v` ordenado.
+  CorrectAnswer: v[order(v)]
+  AnswerTests: omnitest(correctExpr='v[order(v)]')
+  Hint: |
+    
+    
+    Digite `v[order(v)]`.
+    
+
+# 18
+- Class: cmd_question
+  Output: |
+    
+    
+    Com `order()`, você pode ordenar um vetor de acordo com os valores
+    em OUTRO vetor.
+    
+    Use `order()` para mostrar o vetor `nomes` em ordem crescente de 
+    notas.
+  CorrectAnswer: nomes[order(notas)]
+  AnswerTests: omnitest(correctExpr='nomes[order(notas)]')
+  Hint: |
+    
+    
+    Digite `nomes[order(notas)]`.
+    
+
+# 19
+- Class: cmd_question
+  Output: |
+    
+    
+    Agora, use `order()` para mostrar o vetor `notas` em ordem 
+    alfabética de nomes.
+  CorrectAnswer: notas[order(nomes)]
+  AnswerTests: omnitest(correctExpr='notas[order(nomes)]')
+  Hint: |
+    
+    
+    Digite `notas[order(nomes)]`.
+    
+
+# 20
+- Class: cmd_question
+  Output: |
+    
+    
+    Crie o vetor `especiais` com 10 letras maiúsculas escolhidas ao 
+    acaso.
+  CorrectAnswer: especiais <- sample(LETTERS, 10)
+  AnswerTests: omnitest(correctExpr='especiais <- sample(LETTERS, 10)')
+  Hint: |
+    
+    
+    Use a função `sample()` e o vetor `LETTERS`.
+    
+
+# 21
+- Class: cmd_question
+  Output: |
+    
+    
+    Use o operador `%in%` para ver quais elementos de `nomes` estão em
+    `especiais`.
+    
+    Cuidado: para ver a ajuda sobre este operador, você precisa usar aspas:
+    ?'%in%'
+  CorrectAnswer: nomes[nomes %in% especiais]
+  AnswerTests: omnitest(correctExpr='nomes[nomes %in% especiais]')
+  Hint: |
+    
+    
+    Indexe o vetor `nomes` com a expressão `nomes %in% especiais`.
+    
+
