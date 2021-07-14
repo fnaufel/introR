@@ -272,3 +272,19 @@
     
     Para cada valor de k, o somatório interno vale `cumsum(0:10)[k]`.
 
+
+#17
+- Class: script
+  Output: |
+    
+    
+    Complete esta implementação de Bhaskara.
+    
+    Só falta uma expressão na função `raizes` para que ela retorne,
+    DE UMA SÓ VEZ, um vetor com as duas raízes reais.
+  AnswerTests: test_bhaskara()
+  Hint: |
+    
+    
+    Pense no resultado de multiplicar um número por um vetor de 2 elementos.
+  Script: bhaskara.R

@@ -5,5 +5,5 @@ text(
   expression(
     sum(k*(k-1), k==0, 10)
   ), 
-  cex = 3
+  cex = tamanho_formula
 )
