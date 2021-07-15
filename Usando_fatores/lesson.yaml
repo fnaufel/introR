@@ -1,0 +1,14 @@
+- Class: meta
+  Course: introR
+  Lesson: Usando fatores
+  Author: your name goes here
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+
+- Class: cmd_question
+  Output: 1
+  CorrectAnswer: 1
+  AnswerTests: TRUE
+  Hint: hint
