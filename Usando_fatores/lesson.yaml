@@ -1,14 +1,38 @@
 - Class: meta
   Course: introR
   Lesson: Usando fatores
-  Author: your name goes here
+  Author: fnaufel
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: fnaufel
   Version: 2.4.5
 
+- Class: text
+  Output: |
+  
+    EXERCÍCIOS DE INTRODUÇÃO A R
+    
+    USANDO FATORES
+    
+    Tecle ENTER para continuar
 
-- Class: cmd_question
-  Output: 1
-  CorrectAnswer: 1
-  AnswerTests: TRUE
-  Hint: hint
+- Class: text
+  Output: |
+    
+    
+    Quando você estiver no prompt do R (>), digite
+    
+    .   skip() para pular a questão atual.
+   
+    .   play() para experimentar com o R por conta própria.
+   
+    .   nxt() para ganhar a atenção do swirl novamente.
+   
+    .   main() para voltar ao menu principal do swirl.
+   
+    .   info() para ver esta lista de comandos.
+   
+    .   bye() para sair.
+    
+    Tecle ENTER para continuar
+    
+
