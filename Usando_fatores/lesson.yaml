@@ -81,3 +81,258 @@
     que processa vetores corretamente. 
     
     Depois, digite `nxt()` para voltar.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Use a função `str` para ver a estrutura de `situacao`.
+  CorrectAnswer: str(situacao)
+  AnswerTests: omnitest(correctExpr='str(situacao)')
+  Hint: |
+    
+    
+    Digite `str(situacao)`.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Aplique a função `as_factor()` --- com underscore, não com ponto ---
+    ao vetor `situacao`, guardando o resultado em `sitfator`.
+  CorrectAnswer: sitfator <- as_factor(situacao)
+  AnswerTests: omnitest(correctExpr='sitfator <- as_factor(situacao)')
+  Hint: |
+    
+    
+    Digite `sitfator <- as_factor(situacao)`.
+    
+    Se houver um erro, é porque o pacote `forcats` não está instalado.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Examine o conteúdo de `sitfator`. 
+  CorrectAnswer: sitfator
+  AnswerTests: omnitest(correctExpr='sitfator')
+  Hint: |
+    
+    
+    Digite `sitfator`.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Examine a estrutura de `sitfator`.
+  CorrectAnswer: str(sitfator)
+  AnswerTests: omnitest(correctExpr='str(sitfator)')
+  Hint: |
+    
+    
+    Digite `str(sitfator)`.
+
+
+- Class: text
+  Output: |
+    
+    
+    O vetor `sitfator` é um FATOR com 3 NÍVEIS (levels).
+    
+    Um fator é um vetor de dados CATEGÓRICOS do nível NOMINAL 
+    (ou seja, nem ordem eles têm).
+    
+    Os NÍVEIS de um fator são os valores que os elementos 
+    do fator podem assumir.
+    
+    Os níveis são representados internamente por números (como tipos
+    enumerados em outras linguagens de programação)...
+    
+    ...MAS, nos seus comandos, você pode comparar os níveis com strings.
+    
+    Tecle Enter.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Use a função `sum` para descobrir quantos elementos de `sitfator`
+    são do nível 'APR'.
+  CorrectAnswer: sum(sitfator == 'APR')
+  AnswerTests: omnitest(correctExpr='sum(sitfator == \'APR\')')
+  Hint: |
+    
+    
+    O teste `sitfator == 'APR'` retorna um vetor booleano.
+    
+    Ao somar os elementos de um vetor booleano, TRUE equivale a 1,
+    FALSE equivale a 0.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Selecione, em `sitfator`, os elementos de nível diferente de 'REP'.
+  CorrectAnswer: sitfator[sitfator != 'REP']
+  AnswerTests: omnitest(correctExpr='sitfator[sitfator != \'REP\']')
+  Hint: |
+    
+    
+    Digite `sitfator[sitfator != 'REP']`.
+
+
+- Class: exact_question
+  Output: |
+    
+    
+    Quantos níveis têm o resultado?
+  CorrectAnswer: 3
+  AnswerTests: omnitest(correctVal=3)
+  Hint: |
+    
+    
+    Observe que o nível `REP` continua a existir mesmo quando não há
+    nenhum elemento deste nível no vetor.
+    
+    
+- Class: figure
+  Output: |
+    
+    
+    Observe o vetor `sexo` abaixo. Por acaso, as pessoas cujos sexos
+    estamos registrando são todas do sexo masculino.
+    
+    Tecle Enter.
+  Figure: sexo.R
+  FigureType: new
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Verifique a estrutura do vetor `sexo`.
+  CorrectAnswer: str(sexo)
+  AnswerTests: omnitest(correctExpr='str(sexo)')
+  Hint: |
+    
+    
+    Digite `str(sexo)`.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    `sexo` é um vetor de strings.
+    
+    Vamos criar um fator a partir de `sexo`.
+    
+    Digite `factor(sexo)`.
+  CorrectAnswer: factor(sexo)
+  AnswerTests: omnitest(correctExpr='factor(sexo)')
+  Hint: |
+    
+    
+    Digite `factor(sexo)`.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Mas o fator só tem um nível! 
+    
+    Se um dia tivermos que incluir alguém do sexo feminino, teremos
+    um problema.
+    
+    Digite `play()`, veja a ajuda da função `factor()`, e descubra como
+    criar um fator com níveis que não existem no vetor original.
+    
+    Então, digite `nxt()` para voltar a esta pergunta.
+    
+    Crie um fator a partir de `sexo` com dois níveis: M e F.
+  CorrectAnswer: factor(sexo, levels = c('M', 'F'))
+  AnswerTests: 
+    omnitest(correctExpr='factor(sexo, levels = c(\'M\', \'F\'))') ||
+    omnitest(correctExpr='factor(sexo, levels = c(\'F\', \'M\'))')
+  Hint: |
+    
+    
+    Use o argumento `levels` da função `factor`.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Os níveis de um fator podem ter ORDEM. 
+    
+    Neste caso, o fator corresponde ao nível de dados ORDINAL. 
+    
+    O nosso fator com níveis REP, VS e APR devia ter sido ordenado,
+    com REP < VS < APR. 
+    
+    Veja a documentação de `factor` e converta o vetor `situacao`
+    em um fator ordenado. 
+  CorrectAnswer: factor(situacao, ordered = TRUE)
+  AnswerTests: omnitest(correctExpr='factor(situacao, ordered = TRUE)')
+  Hint: |
+    
+    
+    Digite `factor(situacao, ordered = TRUE)`.
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    Mas ainda temos um problema.
+    
+    Os níveis precisam estar na ordem REP < VS < APR, mas a função 
+    `factor` criou os níveis na ordem em que eles aparecem no vetor
+    `situacao`.
+    
+    Para evitar isto, use a função `factor` com os argumentos `ordered`
+    e `levels` para converter o vetor `situacao` em um fator ordenado
+    com os níveis na ordem desejada.
+  CorrectAnswer: factor(situacao, ordered = TRUE, levels = c('REP', 'VS', 'APR'))
+  AnswerTests: 
+    omnitest(
+      correctExpr = 
+      'factor(situacao, ordered = TRUE, levels = c(\'REP\', \'VS\', \'APR\'))'
+    )
+  Hint: |
+    
+    
+    Digite `factor(situacao, ordered = TRUE, levels = c('REP', 'VS', 'APR'))`.
+
+
+- Class: video
+  Output: |
+    
+    
+    O pacote `forcats` tem diversas funções para manipular fatores. 
+    
+    Leia mais sobre elas no menu do RStudio, em
+    Help | Cheatsheets | Browse Cheatsheets.
+    
+    Para ver um exemplo onde o fator `species` tem, como níveis, as
+    espécies dos diferentes personagens de Star Wars, visite o site 
+    do pacote, digitando `Y` abaixo.
+    
+  VideoLink: https://forcats.tidyverse.org/
+
+
+- Class: text
+  Output: |
+    
+    
+    Fim da lição. Tecle Enter.

@@ -1,4 +1,4 @@
 
 n <- 20
-notas <- sample(0:10, n, replace = TRUE)
+notas <- c(10, 3, 5, sample(0:10, n - 3, replace = TRUE))
 print(notas)
