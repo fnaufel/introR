@@ -31,5 +31,4 @@ ensure <- function(name) {
     
 }
 
-ensure('dplyr')
 ensure('forcats')

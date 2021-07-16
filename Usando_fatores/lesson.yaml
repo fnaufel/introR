@@ -36,3 +36,48 @@
     Tecle ENTER para continuar
     
 
+- Class: figure
+  Output: |
+    
+    
+    Veja este vetor com as notas de vários alunos. Tecle Enter.
+  Figure: notas.R
+  FigureType: new
+
+
+- Class: cmd_question
+  Output: |
+    
+    
+    O nome do vetor acima é `notas`.
+    
+    Com um único comando, crie o vetor `situacao`, 
+    cujos elementos são os strings 
+    'REP', 'VS', 'APR', de acordo com as regras
+    
+    nota < 4      : 'REP'
+    
+    4 <= nota < 6 : 'VS'
+    
+    nota >= 6     : 'APR'
+    
+    NÃO USE LOOPS.
+  CorrectAnswer: situacao <- ifelse(notas < 4, 'REP', ifelse(notas >= 6, 'APR', 'VS'))
+  AnswerTests: 
+    omnitest(
+      correctVal=ifelse(notas < 4, 'REP', ifelse(notas >= 6, 'APR', 'VS'))
+    )
+  Hint: |
+    
+    
+    O comando `if` não funciona com vetores, pois só considera 
+    o primeiro elemento. 
+    
+    Se você usou `if`, recebeu uma mensagem de aviso. 
+    
+    Acostume-se a ler estas mensagens com atenção.
+    
+    Digite `play()` e veja a ajuda da função `ifelse`, 
+    que processa vetores corretamente. 
+    
+    Depois, digite `nxt()` para voltar.
