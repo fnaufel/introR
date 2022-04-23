@@ -5,11 +5,18 @@
 # 
 # PARA DESISTIR: digite `skip()` no console e veja a solução.
 #
-
-# Atribua a x o vetor 0, 2, 4, 6, ..., 20
-x <- ...
-
-# Atribua a y o vetor 0, 2, 4, 6, ..., 20 de outra maneira
-y <- ...
-
-
+plot.new()
+text(
+  .5, 
+  .5, 
+  expression(
+    sum(
+      sum(
+        m,
+        m == 0, k
+      ), 
+      k == 0, 10
+    )
+  ), 
+  cex = tamanho_formula
+)
